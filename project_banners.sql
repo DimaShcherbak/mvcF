@@ -30,7 +30,7 @@ CREATE TABLE `banners` (
   `status` tinyint(4) NOT NULL DEFAULT '0',
   `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `banners` (
 
 LOCK TABLES `banners` WRITE;
 /*!40000 ALTER TABLE `banners` DISABLE KEYS */;
-INSERT INTO `banners` VALUES (52,'volkswagen',1,'https://www.volkswagen.ua/',1,'public/images/banners/1596793764_volkswagen_t1_volkswagen_mashina_178762_3840x2160-495x360-MM-90.jpg'),(53,'Mersedes',2,'https://www.mercedes-benz.com/en/vehicles/passenger-cars/cls/',1,'public/images/banners/1596793831_mercedes_benz_c250_amg_mercedes_benz_avtomobil_178687_3840x2160-495x360-MM-90.jpg'),(55,'BMW',4,'https://www.bmw.ua/uk/index.html',1,'public/images/banners/1596793984_bmw_mashina_vid_speredi_178912_3840x2160-495x360-MM-90.jpg');
+INSERT INTO `banners` VALUES (61,'Aston-martin',5,'https://www.astonmartin.com/welcome',1,'public/images/banners/1596990652_183835-aston-martin.jpg'),(62,'BMW',14,'https://www.bmw.ua/ru/index.html?gclid=Cj0KCQjwvb75BRD1ARIsAP6Lcqvghlg9Fd1ocXJtmVbvo72mssKrfAG0GdC41sTM9HDY22a2Z-eD42IaAq8YEALw_wcB',1,'public/images/banners/1596991394_2020_bmw_745e_m_sport_4k-HD.jpg'),(64,'Mercedes  cupe',4,'https://www.mercedes-benz.com/en/vehicles/passenger-cars/cls/',1,'public/images/banners/1596990553_mercedes-amg-wallpaper-scaled.jpg');
 /*!40000 ALTER TABLE `banners` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-07 13:28:44
+-- Dump completed on 2020-08-09 21:19:43

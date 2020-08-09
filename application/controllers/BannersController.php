@@ -2,11 +2,9 @@
 
 namespace application\controllers;
 
-//use application\models\Admin;
 use application\core\Controller;
 use application\lib\ImageUpload;
 use application\models\Banner;
-use application\lib\SimpleImage;
 
 class BannersController extends Controller {
 
@@ -81,7 +79,6 @@ class BannersController extends Controller {
             $this->view->redirect('admin/banners');
         }
         else{
-            $_SESSION['error'] = 'File doesn\'t upload';
             $this->view->redirect('admin/banners/add');
         }
 
@@ -112,20 +109,19 @@ class BannersController extends Controller {
             $errors[] = 'Please give a url';
         }
 
-        if(count($errors)){
-            $_SESSION['error'] = 'Please give fields';
-            $this->view->redirect('admin/banners/add');
-        }
-
         $id = $this->route['id'];
 
+        if(count($errors)){
+            $_SESSION['error'] = 'Please give fields';
+            $this->view->redirect('admin/banners/edit/'.$id);
+        }
 
         $bannerModel = new Banner();
         $positionExist = $bannerModel->checkPosition($position);
 
         if($positionExist){
             $_SESSION['error'] = $position . ' position exist in DB';
-            $this->view->redirect('admin/banners/edit');
+            $this->view->redirect('admin/banners/edit/'.$id);
         }
 
         $status = 0;
@@ -171,6 +167,17 @@ class BannersController extends Controller {
 
     public function positionUpAction(){
         $id = $this->route['id'];
+        $banner = new Banner();
+
+        $currentBanner = $banner->getById($id);
+        $nextBanner = $banner->getUp($currentBanner['position']);
+        if($nextBanner){
+            $banner->reversePosition($currentBanner, $nextBanner);
+        }else{
+            $_SESSION['error'] = "Error";
+        }
+
+        $this->view->redirect('admin/banners');
     }
 }
 

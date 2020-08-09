@@ -8,9 +8,6 @@
     <link href="/public/styles/bootstrap.css" rel="stylesheet">
     <link href="/public/styles/main.css" rel="stylesheet">
     <link href="/public/styles/font-awesome.css" rel="stylesheet">
-<!--    <script src="/public/scripts/jquery.js"></script>-->
-<!--    <script src="/public/scripts/form.js"></script>-->
-<!--    <script src="/public/scripts/popper.js"></script>-->
     <script src="/public/scripts/bootstrap.js"></script>
 
     <link rel="stylesheet" href="/public/styles/style.css" type="text/css">
@@ -55,7 +52,7 @@
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">&copy; Тестовое PHP</p>
+                <p class="copyright text-muted">&copy; Тестовое </p>
             </div>
         </div>
     </div>

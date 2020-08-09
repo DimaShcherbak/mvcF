@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <span class="subheading">FLEX</span>
+                    <span class="subheading">F L E X</span>
                 </div>
             </div>
         </div>
